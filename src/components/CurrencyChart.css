@@ -1,0 +1,41 @@
+.currency-chart-container {
+    background-color: #28456b;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    width: 21%;
+    margin: 0;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    height: 40vh;
+    position: absolute;
+    left: 72%;
+    top: 47%;
+}
+
+.currency-chart-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff9800;
+}
+
+.chart-wrapper {
+  position: relative;
+  height: 400px;
+}
+
+@media (max-width: 768px) {
+  .currency-chart-container {
+    padding: 10px;
+  }
+
+  .currency-chart-title {
+    font-size: 18px;
+  }
+
+  .chart-wrapper {
+    height: 300px;
+  }
+}
