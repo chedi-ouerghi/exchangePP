@@ -14,7 +14,8 @@ const CurrencyChart = () => {
     const fetchCurrencyData = async () => {
       try {
         const response = await fetch(
-          `https://api.currencyfreaks.com/latest?apikey=8977e151619c4f12b1763299118f2ac4&symbols=USD,EUR,TND`
+          `https://api.currencyfreaks.com/latest?apikey=&symbols=USD,EUR,TND`
+          // 8977e151619c4f12b1763299118f2ac4
         );
         const data = await response.json();
         const rates = data.rates;

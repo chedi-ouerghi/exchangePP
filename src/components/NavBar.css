@@ -1,0 +1,92 @@
+/* NavBar.css */
+
+.navbar {
+    background: rgba(28, 30, 35, 0.6);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.3);
+    width: 15%; /* Largeur augmentée pour une meilleure visibilité */
+    height: 30vh; /* Hauteur augmentée pour une meilleure visibilité */
+    position: fixed;
+    left: 0;
+    z-index: 999;
+    transition: background 0.4s ease;
+}
+
+.navbar:hover {
+    background: rgba(19, 22, 30, 0.9);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.5); /* Ombre plus marquée au survol */
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column; /* Alignement vertical */
+    gap: 25px;
+    width: 100%;
+}
+
+.nav-item {
+    list-style: none;
+    position: relative; /* Pour l'effet de soulignement actif */
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center; /* Alignement centré */
+    font-size: 18px; /* Taille de police augmentée */
+    font-weight: 400; /* Poids normal par défaut */
+    transition: color 0.4s ease, transform 0.3s ease; /* Transition pour la couleur et transformation */
+}
+
+.icon {
+    font-size: 30px; /* Augmentation de la taille de l'icône */
+    margin-right: 10px; /* Espacement à droite de l'icône */
+}
+
+.nav-item a:hover,
+.nav-item.active a {
+    color: #4d9cff; /* Couleur active */
+    transform: scale(1.05); /* Effet de zoom au survol */
+}
+
+.nav-item a:hover .icon,
+.nav-item.active a .icon {
+    color: #4d9cff;
+    transform: rotate(10deg); /* Rotation de l'icône au survol */
+}
+
+.nav-item.active a {
+    font-weight: bold; /* Mettre en gras l'élément actif */
+}
+
+/* Active state underline effect */
+.nav-item.active a::before {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Ajuster pour un meilleur alignement */
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background-color: #4d9cff; 
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        width: auto; /* Ajuster la largeur pour mobile */
+        height: auto; /* Ajuster la hauteur pour mobile */
+    }
+    .nav-links {
+        flex-direction: row; /* Passer à l'horizontal sur mobile */
+        gap: 10px; /* Réduire l'espacement sur mobile */
+    }
+}

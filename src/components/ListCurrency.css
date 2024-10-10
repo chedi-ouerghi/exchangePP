@@ -1,0 +1,182 @@
+/* Global Styles */
+body {
+    background: linear-gradient(135deg, #1a1a2e, #0f3460, #16213e);
+  color: #ffffff; /* White text */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container for the currency list */
+.list-currency-app {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgb(30 30 30 / 23%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Title and subtitle styling */
+.list-currency-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.list-currency-subtitle {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 40px;
+  font-weight: 600;
+}
+
+/* Year Selector */
+.year-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    position: relative;
+    width: fit-content;
+}
+
+.year-button {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: none;
+  padding: 12px 30px;
+  margin: 0 8px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.4s, transform 0.2s ease;
+}
+
+.year-button:hover {
+  background-color: #333;
+  transform: scale(1.05); /* Slight grow on hover */
+}
+
+.year-button.active {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  color: #fff;
+  transform: scale(1.1); /* Larger active button */
+}
+
+/* Table styling */
+.list-currency-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.list-currency-thead {
+      background: linear-gradient(135deg, #1a1a2e, #0f3460, #16213e);
+  text-align: left;
+}
+
+.list-currency-row {
+  transition: background-color 0.3s ease;
+}
+
+.list-currency-header {
+  padding: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #444;
+}
+
+.list-currency-cell {
+  padding: 15px;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #444;
+}
+
+.list-currency-tbody tr:nth-child(even) {
+  background: linear-gradient(135deg, #1a1a2e, #0f3460, #16213e);
+}
+
+.list-currency-tbody tr:hover {
+  background: linear-gradient(135deg, #1a1a2e, #0f3460, #16213e);
+}
+
+.list-currency-tbody tr:nth-child(odd) {
+  background-color: #0f3460;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .list-currency-title {
+    font-size: 2rem;
+  }
+
+  .list-currency-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .list-currency-header, 
+  .list-currency-cell {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .year-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .list-currency-app {
+    padding: 20px;
+  }
+}
+
+
+/* Bouton de tri */
+.sort-button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: block;
+  text-align: center;
+  width: fit-content;
+}
+
+.sort-button:hover {
+  background: linear-gradient(135deg, #66bb6a, #4caf50);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.filter-section{
+     padding: 25px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  height: 10vh;
+}
